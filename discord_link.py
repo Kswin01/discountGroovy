@@ -47,7 +47,16 @@ async def play(ctx, *args):
     }
 
     with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        # Checking to make sure that the video is under 10 minutes in length
+        dictMeta = ydl.extract_info(url, download=False)
+
+        if dictMeta['duration'] > 600:
+            msg = 'the fuck u think u doing eh?'
+            await ctx.send(msg)
+            return
+
         ydl.download([url])
+
     for file in os.listdir("./"):
         if file.endswith(".mp3"):
             os.rename(file, 'song.mp3')
@@ -55,7 +64,7 @@ async def play(ctx, *args):
     voice.play(discord.FFmpegPCMAudio("song.mp3"))
 
     voice.volume = 75
-    
+
     voice.is_playing()
 
     await ctx.send(msg)
