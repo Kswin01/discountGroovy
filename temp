@@ -1,0 +1,17 @@
+{
+    "name": "skip",
+    "description": "Skip current track",
+    "options": []
+}
+
+{
+    "name": "stop",
+    "description": "Stop playing",
+    "options": []
+}
+
+{
+    "name": "leave",
+    "description": "Force bot to leave the channel",
+    "options": []
+}
