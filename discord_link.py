@@ -92,7 +92,7 @@ async def pause(ctx):
 
 @bot.command()
 async def resume(ctx):
-    msg = "There you fucking go you mut"
+    msg = "There you fucking go you poop"
     voice = get(bot.voice_clients, guild=ctx.guild)
 
     voice.resume()
