@@ -24,16 +24,15 @@ music_queue = []
 
 async def music_player(ctx):
 
-    while len(music_queue) > 0:
+    while len(music_queue) >= 0:
         voice = get(bot.voice_clients, guild=ctx.guild)
 
         if voice.is_playing() is True:
             await asyncio.sleep(10)
             continue
-        
-        if voice.is_playing() is False and len(music_queue) == 0:
-            await voice.disconnect()
-            continue
+        elif len(music_queue) == 0:
+            await dc(ctx)
+            return
 
         curr_ctx = ctx
  
