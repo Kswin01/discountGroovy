@@ -15,7 +15,7 @@ import re
 
 
 #load_dotenv()
-TOKEN = 'ODg3NTc4OTY2OTE4MDUzOTQ5.YUGMVA.jJD-vBv0_sHlNQ3iC-KGlLg_GYw'
+TOKEN = 'enter token here'
 
 bot = commands.Bot(command_prefix='?')
 
