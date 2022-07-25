@@ -37,7 +37,7 @@ async def music_player(ctx):
         curr_ctx = ctx
  
         url = music_queue.pop(0)
-        if url == "https://www.youtube.com/watch?v=ZCBz8A0Sx_8":
+        if url == "something to block":
             await ctx.send("Whilst i do agree, no")
             await asyncio.sleep(10)
             continue
@@ -59,7 +59,7 @@ async def music_player(ctx):
             vid_length = dictMeta['duration']
 
             if vid_length > 600:
-                msg = 'the fuck u think u doing eh?'
+                msg = 'what u think u doing eh?'
                 await ctx.send(msg)
                 return
 
