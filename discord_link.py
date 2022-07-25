@@ -146,7 +146,7 @@ async def stop(ctx):
 
 @bot.command()
 async def pause(ctx):
-    msg = "Alright alright give me a fucking second"
+    msg = "Pausing"
     await ctx.send(msg)
 
     voice = get(bot.voice_clients, guild=ctx.guild)
@@ -155,7 +155,7 @@ async def pause(ctx):
 
 @bot.command()
 async def resume(ctx):
-    msg = "There you fucking go you poop"
+    msg = "Resuming"
     voice = get(bot.voice_clients, guild=ctx.guild)
 
     voice.resume()
@@ -167,7 +167,7 @@ async def dc(ctx):
     voice = get(bot.voice_clients, guild=ctx.guild)
     await voice.disconnect()
     music_queue.clear()
-    msg = "Aight see ya later cunt"
+    msg = "Bye Bye!"
     await ctx.send(msg)
 
 @bot.command()
